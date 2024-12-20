@@ -1,5 +1,9 @@
+function normalizeString(str) {
+  return str.normalize("NFKC"); // Normalize to ensure consistent character representation
+}
+
 function transliterate(inputText) {
-  inputText = inputText.toLowerCase(); // Make input case-insensitive
+  inputText = normalizeString(inputText).toLowerCase(); // Normalize and make input case-insensitive
   for (const [key, value] of Object.entries(substitutions)) {
     const regex = new RegExp(key, "gi"); // Case-insensitive replacement
     inputText = inputText.replace(regex, value);
@@ -8,9 +12,9 @@ function transliterate(inputText) {
 }
 
 function performTransliteration() {
-  const input = document.getElementById("input").value;
-  const output = transliterate(input);
-  document.getElementById("output").textContent = output;
+  const input = document.getElementById("input").value; // Get input text
+  const output = transliterate(input); // Perform transliteration
+  document.getElementById("output").value = output; // Display the output
 }
 
 function copyToClipboard() {

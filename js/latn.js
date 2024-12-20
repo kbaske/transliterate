@@ -194,7 +194,7 @@ const substitutions = {
   K̕: "ᱜ",
   k̕: "ᱜ",
   ḱ: "ᱜ",
-  "k’": "ᱜ",
+  "k(?:'|’|‘)": "ᱜ", // Match all apostrophe-like characters
   l: "ᱞ",
   L: "ᱞ",
   m: "ᱢ",
