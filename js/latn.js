@@ -47,6 +47,7 @@
     ei: "ᱮᱭ",
     eo: "ᱮᱭᱚ",
     eu: "ᱮᱣ",
+    earch: "ᱟᱨᱪ",
     // variations of f
     f: "ᱯᱷ",
     // variations of g
