@@ -824,15 +824,15 @@
     let outputText = inputText;
 
     // Handle specific pair substitutions first
-    outputText = outputText.replace(/ia/g, "ᱤᱭᱟ");
-    outputText = outputText.replace(/ea/g, "ᱮᱭᱟ");
+    // outputText = outputText.replace(/ia/g, "ᱤᱭᱟ");
+    // outputText = outputText.replace(/ea/g, "ᱮᱭᱟ");
 
-    outputText = outputText.replace(/oa/g, "ᱳᱣᱟ");
-    outputText = outputText.replace(/o̠a/g, "ᱚᱣᱟ");
-    outputText = outputText.replace(/o̱a/g, "ᱚᱣᱟ");
-    outputText = outputText.replace(/aa/g, "ᱟᱣᱟ");
-    outputText = outputText.replace(/ạa/g, "ᱟᱹᱣᱟ");
-    outputText = outputText.replace(/ua/g, "ᱩᱣᱟ");
+    // outputText = outputText.replace(/oa/g, "ᱳᱣᱟ");
+    // outputText = outputText.replace(/o̠a/g, "ᱚᱣᱟ");
+    // outputText = outputText.replace(/o̱a/g, "ᱚᱣᱟ");
+    // outputText = outputText.replace(/aa/g, "ᱟᱣᱟ");
+    // outputText = outputText.replace(/ạa/g, "ᱟᱹᱣᱟ");
+    // outputText = outputText.replace(/ua/g, "ᱩᱣᱟ");
 
     // Sort keys by length in descending order to handle longer matches first
     const sortedKeys = Object.keys(substitutions).sort(
