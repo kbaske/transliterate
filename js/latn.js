@@ -839,7 +839,6 @@
     q: "ᱠ",
     // variations of r
     ṛ: "ᱲ",
-    ṛh: "ᱲᱷ",
     r: "ᱨ",
     // variations of s
     s: "ᱥ",
