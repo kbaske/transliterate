@@ -117,6 +117,9 @@
     aet́: "ᱟᱭᱮᱫ",
     ạeć: "ᱟᱹᱭᱮᱡ",
     aoe: "ᱟᱣᱮ",
+    ạue̠: "ᱟᱹᱣᱮᱹ",
+    ạue: "ᱟᱹᱣᱮ",
+    aue: "ᱟᱣᱮ",
 
     // variations of b
     bh: "ᱵᱷ",
@@ -299,6 +302,7 @@
     e̱: "ᱮᱹ",
     e̠: "ᱮᱹ",
     e̠̠: "ᱮᱹ", // not yet implemented everywhere
+    è: "ᱮ", // not yet implemented everywhere
     ẽ̱: "ᱮᱸ",
     ẽ̱: "ᱮᱸ",
     ẽ̠: "ᱮᱸ",
