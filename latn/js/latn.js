@@ -7,6 +7,7 @@
     ạ: "ᱟᱹ", // not applied everywhere
     ạ̣: "ᱟᱹ", // not applied everywhere
     a̠: "ᱟᱹ", // not applied everywhere
+    ä: "ᱟᱹ", // not applied everywhere
     ã: "ᱟᱸ", // not applied everywhere
     ã: "ᱟᱸ",
     ã̃: "ᱟᱸ", // not applied everywhere
