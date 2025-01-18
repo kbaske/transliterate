@@ -520,8 +520,12 @@
     // variations of j
     j: "ᱡᱽ",
     jh: "ᱡᱷ",
+
     johar: "ᱡᱚᱦᱟᱨ",
     jharkhand: "ᱡᱷᱟᱨᱠᱷᱟᱸᱰ",
+    Jharkhõ̱ṇḍ: "ᱡᱷᱟᱨᱠᱷᱚᱱᱰ",
+    Jharkho̠ṇḍ: "ᱡᱷᱟᱨᱠᱷᱚᱱᱰ",
+
     jʼa: "ᱡᱼᱟ", // Extra if used
     jʼe: "ᱡᱼᱮ",
     jʼi: "ᱡᱼᱤ",
