@@ -1,14 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sat">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../../assets/icons/logo/transliterate.ico">
     <title>Latin (Roman) Transliteration Tool</title>
     <meta name="description" content="Transliteration Tool for converting text between Roman/Latin script to Santali (Ol Chiki) script. Easily transliterate or convert and copy and paste your text.">
+    <link rel="stylesheet" href="../../assets/layout/css/layout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ol+Chiki:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/template/css/transliterate/transliterate.css">
 </head>
 <body>
+    <header>
+    <div class="mobile-header">
+        <button class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">☰</button>
+        <span class="site-name">ᱣᱤᱠᱤ ᱟᱹᱲᱟᱹ ᱢᱩᱨᱟᱹᱭ</span>
+        <span class="langsel">
+            <select id="languageSelectorM" title="Language" onchange="changeLanguage(event)">
+            <option value="sat">ᱥᱟᱱᱛᱟᱲᱤ</option>
+            <option value="en">English</option>
+            </select>
+        </span>
+    </div>
+    <div class="desktop-header">
+        <span class="site-name">ᱣᱤᱠᱤ ᱟᱹᱲᱟᱹ ᱢᱩᱨᱟᱹᱭ</span>
+        <nav>
+            <ul class="desktop-menu">
+                <li>
+                  <select id="languageSelector" title="Language" onchange="changeLanguage(event)">
+                  <option value="sat">ᱥᱟᱱᱛᱟᱲᱤ</option>
+                  <option value="en">English</option>
+                  </select>
+                </li>
+                <li><a href="/wt">ᱚᱲᱟᱜ</a></li>
+                <li><a href="/wt/README.md">ᱟᱞᱮ ᱵᱟᱵᱚᱛ</a></li>
+                <li class="dropdown">
+                    <a href="#tools">ᱥᱟᱯᱟᱵ ᱠᱚ</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="/wt/search/">Check Word</a></li>
+                      <li><a href="/wt/dics/">Dictionary/Translation Search</a></li>
+                      <li><a href="/wt/itemp/">Interactive Template</a></li>
+                      <li><a href="/wt/temp/">Wiktionary Template</a></li>
+                      <li><a href="/wt/stemp/">SN Template</a></li>
+                      <li><a href="/wt/mymemory/">Mymemory</a></li>
+                      <li><a href="/wt/sptts/">Santali TTS</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://olbaha.blogspot.com/p/contact.html" target="_blank" rel="noopener">ᱥᱟᱹᱜᱟᱹᱭ ᱞᱮᱯᱮ</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div id="mobile-menu" class="mobile-menu">
+  <button id="close-menu" class="close-button">X</button>
+  <!-- Add your menu items here -->
+  <a href="/wt">ᱚᱲᱟᱜ</a>
+  <a href="/wt/README.md">ᱟᱞᱮ ᱵᱟᱵᱚᱛ</a>
+  <div class="dropdown">
+    <a href="#tools" class="dropdown-toggle" onclick="toggleDropdown(event)">ᱥᱟᱯᱟᱵ ᱠᱚ <span class="drop-u"><img width="20" height="20" src="https://img.icons8.com/ios/1600/FFFFFF/circled-chevron-down.png" alt="circled-chevron-down"/></span> </a>
+    <ul class="dropdown-content">
+      <li><a href="/wt/search/">Check Word</a></li>
+        <li><a href="/wt/dics/">Dictionary/Translation Search</a></li>
+        <li><a href="/wt/itemp/">Interactive Template</a></li>
+        <li><a href="/wt/temp/">Wiktionary Template</a></li>
+        <li><a href="/wt/stemp/">SN Template</a></li>
+        <li><a href="/wt/mymemory/">Mymemory</a></li>
+        <li><a href="/wt/sptts/">Santali TTS</a></li>
+    </ul>
+</div>
+  <a href="https://literature.santals.in/p/contact.html" target="_blank" rel="noopener">ᱥᱟᱹᱜᱟᱹᱭ ᱞᱮᱯᱮ</a>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+  <main>
     <div class="container">
         <h1>ᱪᱤᱠᱤ ᱵᱚᱱᱚᱫᱚᱞ ᱥᱟᱯᱟᱵ</h1>
         <p>ᱟᱢᱟᱜ ᱚᱱᱚᱞ ᱥᱮᱞᱮᱫᱽᱢᱮ ᱟᱨ "ᱪᱤᱠᱤ ᱵᱚᱱᱚᱫᱚᱞ" ᱨᱮ ᱞᱤᱱᱢᱮ ᱚᱨᱡᱚ ᱧᱮᱞ ᱞᱟᱹᱜᱤᱫ<a href="../"> ᱾</a> </p>
@@ -21,6 +89,14 @@
         <h2>ᱚᱨᱡᱚ :</h2>
         <div id="output">ᱟᱢᱟᱜ ᱪᱤᱠᱤ ᱵᱚᱱᱚᱫᱚᱞᱚᱜ ᱚᱱᱚᱞ ᱠᱚ ᱱᱚᱸᱰᱮᱭ ᱩᱫᱩᱜᱟ...</div>
     </div>
+    </main>
+
+  <footer>
+    <p> <span class="copyrt">©</span> 2024 <a href="https://santals.in/" target="_blank" rel="noopener">Santali Tools</a>. All Rights Reserved.</p>
+  </footer>
+
+  <!-- [ JavaScript ] -->
+  <script src="../../assets/layout/js/layout.js"></script>
     <script src="../../assets/template/js/transliterate/latin.js"></script>
 </body>
 </html>
